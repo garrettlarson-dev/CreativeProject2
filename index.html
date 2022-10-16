@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Get a Bible Verse!</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+	<body>
+        <div class="mainWrapper">
+            <div class="container bg">
+                <div class="row p-5">
+                    <h1 class="text-center">Get a Bible Verse!</h1>
+
+                    <div id="choice" class="mb-4">
+                        <h4>Choose Specific Chapter:</h4>
+                        <select id="book" class="form-select mb-2" aria-label="Default select example">
+                            <option selected>Select a Book</option>
+                            <option value="Matthew">Matthew</option>
+                            <option value="Mark">Mark</option>
+                            <option value="Luke">Luke</option>
+                            <option value="John">John</option>
+                            <option value="Acts">Acts</option>
+                            <option value="Romans">Romans</option>
+                            <option value="1 Corinthians">1 Corinthians</option>
+                            <option value="2 Corinthians">2 Corinthians</option>
+                            <option value="Galatians">Galatians</option>
+                            <option value="Ephesians">Ephesians</option>
+                            <option value="Philippians">Philippians</option>
+                            <option value="Colossians">Colossians</option>
+                            <option value="1 Thessalonians">1 Thessalonians</option>
+                            <option value="2 Thessalonians">2 Thessalonians</option>
+                            <option value="1 Timothy">1 Timothy</option>
+                            <option value="2 Timothy">2 Timothy</option>
+                            <option value="Titus">Titus</option>
+                            <option value="Philemon">Philemon</option>
+                            <option value="Hebrews">Hebrews</option>
+                            <option value="James">James</option>
+                            <option value="1 Peter">1 Peter</option>
+                            <option value="2 Peter">2 Peter</option>
+                            <option value="1 John">1 John</option>
+                            <option value="2 John">2 John</option>
+                            <option value="3 John">3 John</option>
+                            <option value="Jude">Jude</option>
+                            <option value="Revelation">Revelation</option>
+                        </select>
+    
+                        <select id="chapter" class="form-select mb-2" aria-label="Default select example">
+                            <option selected>Select a Chapter</option>
+                        </select>    
+                        <button id="submit" class="btn btn-primary">Get Verse</button>
+                    </div>
+
+                    <!-- <div id="random">
+                        <h4>Generate Random Verse:</h4>
+                        <button id="submit" class="btn btn-primary">Get Verse</button>
+                    </div> -->
+                    <p id="myverse"></p>
+                    <p id="result"></p>
+                    
+                </div>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+	</body>
+</html>
+
