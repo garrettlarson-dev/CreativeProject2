@@ -29,3 +29,17 @@ p {
     align-items: center;
 }
 
+.footerLink {
+    position: absolute;
+    bottom: 20px;
+    margin: 0 auto;
+    color: #fff;
+    text-decoration: none;
+    transition: 100ms;
+}
+.footerLink:hover {
+    color: #F1A208;
+    transition: 100ms;
+}
+
+
