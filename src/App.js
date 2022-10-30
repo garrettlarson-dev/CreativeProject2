@@ -1,65 +1,28 @@
 import React, { Component } from "react";
 import './App.css';
-import { Input } from "./components/Input";
-import Button from "./components/Button";
-import { ClearButton } from "./components/ClearButton";
-import * as math from 'mathjs'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Weather from "./pages/Weather";
+import NavItems from "./components/NavItems"
+import Calculator from "./pages/Calculator";
+import { Link, Outlet } from "react-router-dom"
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      input: ""
-    }
-  }
-
-  addToInput = val => {
-    this.setState({input: this.state.input + val});
-  };
-
-
-  handleEqual = () => {
-    this.setState({input: math.evaluate(this.state.input)});
-  };
-
-  render() {
-    return (
-      <div className="App">
-        <h1 className="mainTitle">React Calculator</h1>
-        <div className="calc-wrapper">
-          <Input input={this.state.input}/>
-          <div className="row">
-            <Button handleClick={this.addToInput}>7</Button>
-            <Button handleClick={this.addToInput}>8</Button>
-            <Button handleClick={this.addToInput}>9</Button>
-            <Button handleClick={this.addToInput}>/</Button>
-          </div>
-          <div className="row">
-            <Button handleClick={this.addToInput}>4</Button>
-            <Button handleClick={this.addToInput}>5</Button>
-            <Button handleClick={this.addToInput}>6</Button>
-            <Button handleClick={this.addToInput}>x</Button>
-          </div>
-          <div className="row">
-            <Button handleClick={this.addToInput}>1</Button>
-            <Button handleClick={this.addToInput}>2</Button>
-            <Button handleClick={this.addToInput}>3</Button>
-            <Button handleClick={this.addToInput}>+</Button>
-          </div>
-          <div className="row">
-            <Button handleClick={this.addToInput}>.</Button>
-            <Button handleClick={this.addToInput}>0</Button>
-            <Button handleClick={this.handleEqual}>=</Button>
-            <Button handleClick={this.addToInput}>-</Button>
-          </div>
-          <div className="row">
-            <ClearButton handleClear={() => this.setState({input: ""})}>Clear</ClearButton>
-          </div>
-        </div>
-      </div>
-    );
-  }
-  
+export default function App() {
+  return (
+    <div className="App">
+      <h3 className="mainTitle">My Widgets</h3>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="calculator" element={<Calculator />} />
+          <Route path="weather" element={<Weather />} />
+          <Route path="*" element={<Navigate to="/" />}  />
+        </Route>
+      </Routes>
+      </BrowserRouter>
+      <Outlet/>
+      
+      <a class="footerLink" href="https://github.com/garrettlarson-dev/widgets">View My Repository</a>
+    </div>
+  );
 }
-
-export default App;

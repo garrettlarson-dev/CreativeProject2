@@ -1,0 +1,13 @@
+.navMenu {
+    color: #fff !important;
+    position: absolute;
+    padding: 0px;
+    top: 0px;
+    right: 20px;
+}
+.navMenu li {
+    list-style-type: none;
+    font-size: 1.4em;
+    display: inline-block;
+    padding: 10px;
+}
